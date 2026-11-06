@@ -1,0 +1,60 @@
+{
+  "team": [
+    {
+      "id": "michael-promise",
+      "name": "Michael Promise",
+      "published": true,
+      "role": "Founder · Webflow & Framer",
+      "group": "Webflow & Framer",
+      "bio": "Webflow, Framer and Figma specialist. Edit this bio in the dashboard (Admin > Team).",
+      "photo": "",
+      "skills": ["Webflow", "Framer", "Figma"],
+      "years": "",
+      "starting_rate": "",
+      "available": true,
+      "work": ["sample-project-1", "sample-project-3"]
+    },
+    {
+      "id": "team-member-2",
+      "name": "Team Member 2",
+      "published": true,
+      "role": "Figma · UI/UX Designer",
+      "group": "Design",
+      "bio": "Sample team member. Replace the name, photo and bio in the dashboard, or untick Published to hide it.",
+      "photo": "",
+      "skills": ["Figma", "UI/UX"],
+      "years": "",
+      "starting_rate": "",
+      "available": true,
+      "work": []
+    },
+    {
+      "id": "team-member-3",
+      "name": "Team Member 3",
+      "published": true,
+      "role": "WordPress · Shopify Developer",
+      "group": "WordPress & Full-stack",
+      "bio": "Sample team member. Replace the name, photo and bio in the dashboard, or untick Published to hide it.",
+      "photo": "",
+      "skills": ["WordPress", "Shopify"],
+      "years": "",
+      "starting_rate": "",
+      "available": true,
+      "work": ["sample-project-2"]
+    },
+    {
+      "id": "team-member-4",
+      "name": "Team Member 4",
+      "published": true,
+      "role": "Brand · AI Content Creator",
+      "group": "Brand & AI",
+      "bio": "Sample team member. Replace the name, photo and bio in the dashboard, or untick Published to hide it.",
+      "photo": "",
+      "skills": ["Logo design", "AI video"],
+      "years": "",
+      "starting_rate": "",
+      "available": true,
+      "work": []
+    }
+  ]
+}

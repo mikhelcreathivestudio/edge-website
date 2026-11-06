@@ -1,0 +1,269 @@
+# EDGE admin dashboard (Decap CMS). Open https://YOUR-SITE/admin.html to use it.
+# BEFORE FIRST USE: change "repo" below to  your-github-username/your-repo-name
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/edge-website
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+media_folder: images/uploads
+public_folder: /images/uploads
+publish_mode: simple
+locale: en
+site_url: https://YOUR-SITE.netlify.app
+display_url: https://YOUR-SITE.netlify.app
+
+collections:
+  # ------------------------------------------------------------------ PROJECTS
+  - name: projects
+    label: Projects
+    description: Your completed projects. Each one gets its own page with Order and Negotiate buttons.
+    files:
+      - name: projects
+        label: All projects
+        file: projects.json
+        format: json
+        fields:
+          - label: Projects
+            name: projects
+            widget: list
+            label_singular: project
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Page address (lowercase, no spaces, e.g. nova-saas)", name: id, widget: string, hint: "Used in the link. Do not change it after publishing." }
+              - { label: Project name, name: name, widget: string }
+              - { label: Show on the site, name: published, widget: boolean, default: true }
+              - { label: Category (e.g. Landing page, E-commerce, Agency site), name: category, widget: string }
+              - { label: Platform (e.g. Webflow), name: platform, widget: string, required: false }
+              - { label: Pages (e.g. 5 pages), name: pages, widget: string, required: false }
+              - { label: Delivery time (e.g. 7 days), name: delivery, widget: string, required: false }
+              - { label: Price (e.g. $300), name: price, widget: string, required: false }
+              - { label: Description, name: description, widget: text }
+              - { label: Main image / screenshot, name: image, widget: image, required: false, allow_multiple: false }
+              - label: More screenshots
+                name: gallery
+                widget: list
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: Image, name: image, widget: image }
+                  - { label: Label, name: label, widget: string, required: false }
+              - label: What the buyer gets (one item per line)
+                name: includes
+                widget: list
+                required: false
+                field: { label: Item, name: item, widget: string }
+              - { label: Stripe payment link (paste from Stripe), name: stripe_link, widget: string, required: false, hint: "Starts with https://buy.stripe.com/ . Leave empty to show a request form instead." }
+              - { label: PayPal payment link, name: paypal_link, widget: string, required: false, hint: "Starts with https://www.paypal.com/ or https://paypal.me/ ." }
+
+  # ---------------------------------------------------------------------- TEAM
+  - name: team
+    label: Team
+    description: The developers and designers clients can hire.
+    files:
+      - name: team
+        label: All team members
+        file: team.json
+        format: json
+        fields:
+          - label: Team members
+            name: team
+            widget: list
+            label_singular: team member
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Page address (lowercase, no spaces, e.g. michael-promise)", name: id, widget: string }
+              - { label: Full name, name: name, widget: string }
+              - { label: Show on the site, name: published, widget: boolean, default: true }
+              - { label: "Job title (e.g. Founder · Webflow & Framer)", name: role, widget: string }
+              - { label: "Specialty group (used for the filter buttons, e.g. Design)", name: group, widget: string }
+              - { label: Bio, name: bio, widget: text }
+              - { label: Photo, name: photo, widget: image, required: false }
+              - label: Skills
+                name: skills
+                widget: list
+                required: false
+                field: { label: Skill, name: skill, widget: string }
+              - { label: Years of experience, name: years, widget: string, required: false }
+              - { label: Starting rate (e.g. $25/hr), name: starting_rate, widget: string, required: false }
+              - { label: Available for new work, name: available, widget: boolean, default: true }
+              - label: "Projects to show on their profile (type each project's page address)"
+                name: work
+                widget: list
+                required: false
+                field: { label: Project page address, name: project, widget: string }
+
+  # ------------------------------------------------------- SITE SETTINGS & TEXT
+  - name: site
+    label: Site settings & page text
+    description: Your email, forms, booking, packages and the words on each page.
+    files:
+      - name: contact
+        label: Contact, forms and booking
+        file: contact.json
+        format: json
+        fields:
+          - { label: Brand name, name: brand, widget: string }
+          - { label: Tagline (footer), name: tagline, widget: string }
+          - { label: Email that receives messages, name: email, widget: string }
+          - { label: Phone (optional), name: phone, widget: string, required: false }
+          - { label: Form link (Formspree), name: form_endpoint, widget: string, required: false, hint: "Paste your Formspree link, like https://formspree.io/f/abcdwxyz . Without it, forms open the visitor's email app instead." }
+          - { label: Booking link (Cal.com or Calendly), name: booking_url, widget: string, required: false, hint: "Optional. If set, the Book a call page shows your calendar instead of the request form." }
+          - { label: "Reply time shown to clients (e.g. 24 hours)", name: reply_time, widget: string }
+          - { label: Time zone label, name: timezone_label, widget: string }
+          - label: Call time slots
+            name: booking_slots
+            widget: list
+            field: { label: Time, name: time, widget: string }
+
+      - name: home
+        label: Home page
+        file: home.json
+        format: json
+        fields:
+          - label: Home page top section
+            name: hero
+            widget: object
+            fields:
+              - { label: Small label above the headline, name: eyebrow, widget: string }
+              - { label: "Headline (new line = Enter. Put [[ ]] around the glowing words)", name: title, widget: text }
+              - { label: Sub-headline, name: subtitle, widget: text }
+              - { label: Main button text, name: primary_button, widget: string }
+              - { label: Second button text, name: secondary_button, widget: string }
+              - label: Four floating tags
+                name: chips
+                widget: list
+                field: { label: Tag, name: tag, widget: string }
+          - label: Scrolling strip (tools)
+            name: marquee
+            widget: list
+            field: { label: Item, name: item, widget: string }
+          - label: Three ways to work with you
+            name: ways
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+              - { label: Link to page (e.g. projects.html), name: link, widget: string }
+          - label: Numbers (leave empty until you have real ones)
+            name: stats
+            widget: list
+            required: false
+            summary: "{{fields.value}}{{fields.suffix}} {{fields.label}}"
+            fields:
+              - { label: Number, name: value, widget: number, value_type: int }
+              - { label: "Symbol after the number (e.g. + or %)", name: suffix, widget: string, required: false }
+              - { label: Label, name: label, widget: string }
+          - label: Testimonials (leave empty until you have real ones)
+            name: testimonials
+            widget: list
+            required: false
+            summary: "{{fields.name}}"
+            fields:
+              - { label: Quote, name: quote, widget: text }
+              - { label: Client name, name: name, widget: string }
+              - { label: Company, name: company, widget: string, required: false }
+          - label: Bottom call-to-action
+            name: cta
+            widget: object
+            fields:
+              - { label: "Headline (use [[ ]] for glowing words)", name: title, widget: text }
+              - { label: Text, name: text, widget: text }
+
+      - name: services
+        label: Services page
+        file: services.json
+        format: json
+        fields:
+          - label: Services
+            name: services
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Short tag (e.g. Webflow), name: tag, widget: string }
+              - { label: Description, name: text, widget: text }
+              - label: Bullet points
+                name: bullets
+                widget: list
+                field: { label: Bullet, name: bullet, widget: string }
+          - label: Custom work block
+            name: fullstack
+            widget: object
+            fields:
+              - { label: "Title (use [[ ]] for glowing words)", name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+              - label: Rows
+                name: rows
+                widget: list
+                summary: "{{fields.k}}"
+                fields:
+                  - { label: Left text, name: k, widget: string }
+                  - { label: Right text, name: v, widget: string }
+          - label: Work steps
+            name: process
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: string }
+
+      - name: packages
+        label: Packages and prices (Starter / Pro / Premium)
+        file: packages.json
+        format: json
+        fields:
+          - label: Packages
+            name: packages
+            widget: list
+            summary: "{{fields.name}} {{fields.price}}"
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Price (e.g. $499), name: price, widget: string }
+              - { label: Short description, name: blurb, widget: string }
+              - label: What is included
+                name: features
+                widget: list
+                field: { label: Item, name: item, widget: string }
+              - { label: Stripe payment link, name: stripe_link, widget: string, required: false }
+              - { label: PayPal payment link, name: paypal_link, widget: string, required: false }
+              - { label: Mark as most popular, name: popular, widget: boolean, default: false }
+          - label: Questions and answers
+            name: faq
+            widget: list
+            summary: "{{fields.q}}"
+            fields:
+              - { label: Question, name: q, widget: string }
+              - { label: Answer, name: a, widget: text }
+
+      - name: about
+        label: About page
+        file: about.json
+        format: json
+        fields:
+          - label: About page
+            name: about
+            widget: object
+            fields:
+              - { label: "Headline (use [[ ]] for glowing words)", name: headline, widget: text }
+              - { label: Intro line, name: intro, widget: string }
+              - { label: Our story, name: story, widget: text }
+              - { label: How we work, name: approach, widget: text }
+              - label: Values
+                name: values
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Text, name: text, widget: text }
+              - label: Timeline (optional)
+                name: timeline
+                widget: list
+                required: false
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: Small label (e.g. 2026), name: label, widget: string }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Text, name: text, widget: text }

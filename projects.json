@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "id": "sample-project-1",
+      "name": "Sample Project 1",
+      "published": true,
+      "category": "Landing page",
+      "platform": "Webflow",
+      "pages": "5 pages",
+      "delivery": "7 days",
+      "price": "$300",
+      "description": "This is a sample project. Replace it in the dashboard (Admin > Projects) with your real work: add a name, description, price, screenshots and a Stripe payment link.",
+      "includes": ["Full design and build as shown", "Your logo, colours and text swapped in", "Mobile responsive"],
+      "image": "",
+      "gallery": [],
+      "stripe_link": "",
+      "paypal_link": ""
+    },
+    {
+      "id": "sample-project-2",
+      "name": "Sample Project 2",
+      "published": true,
+      "category": "E-commerce",
+      "platform": "Shopify",
+      "pages": "8 pages",
+      "delivery": "10 days",
+      "price": "$600",
+      "description": "This is a sample project. Replace it in the dashboard (Admin > Projects) with your real work.",
+      "includes": ["Full design and build as shown", "Product pages and cart", "Mobile responsive"],
+      "image": "",
+      "gallery": [],
+      "stripe_link": "",
+      "paypal_link": ""
+    },
+    {
+      "id": "sample-project-3",
+      "name": "Sample Project 3",
+      "published": true,
+      "category": "Agency site",
+      "platform": "Framer",
+      "pages": "6 pages",
+      "delivery": "7 days",
+      "price": "$450",
+      "description": "This is a sample project. Replace it in the dashboard (Admin > Projects) with your real work.",
+      "includes": ["Full design and build as shown", "Custom animations", "Mobile responsive"],
+      "image": "",
+      "gallery": [],
+      "stripe_link": "",
+      "paypal_link": ""
+    }
+  ]
+}

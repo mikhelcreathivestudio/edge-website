@@ -1,0 +1,18 @@
+{
+  "brand": "EDGE",
+  "tagline": "Websites with an edge.",
+  "email": "mikhelcreathivestudio@gmail.com",
+  "phone": "",
+  "form_endpoint": "",
+  "booking_url": "",
+  "reply_time": "24 hours",
+  "timezone_label": "West Africa Time (Lagos)",
+  "booking_slots": [
+    "10:00 AM",
+    "12:00 PM",
+    "2:00 PM",
+    "4:00 PM",
+    "6:00 PM",
+    "8:00 PM"
+  ]
+}

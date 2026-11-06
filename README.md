@@ -1,6 +1,6 @@
 # EDGE website: setup guide
 
-This is the live EDGE website plus an admin dashboard at `/admin`.
+This is the live EDGE website plus an admin dashboard at `/admin.html`.
 Everything you will want to change (projects, images, team, prices, text, email, payment links) is edited from the dashboard. You never need to touch code.
 
 What it costs: nothing (GitHub free, Netlify free, Formspree free tier, Stripe takes its normal fee per payment).
@@ -10,7 +10,7 @@ What it costs: nothing (GitHub free, Netlify free, Formspree free tier, Stripe t
 ## 1. Put the files on GitHub (5 minutes)
 
 1. On github.com click **New repository**. Name it `edge-website`. Private is fine.
-2. Click **uploading an existing file**, then drag in everything from this folder (all files and the `admin`, `assets`, `content`, `images` folders). Commit.
+2. Click **uploading an existing file**, then select every file in this folder and upload them all together (this version has no folders, so it works from a phone). Commit.
 
 ## 2. Publish it with Netlify (5 minutes)
 
@@ -29,10 +29,10 @@ The dashboard saves your edits into your GitHub repo, so it needs permission to 
    - Authorization callback URL: `https://api.netlify.com/auth/done`
 2. Copy the **Client ID**, click **Generate a new client secret** and copy the secret right away (GitHub shows it once).
 3. In Netlify open your project, then **Project configuration > Access & security > OAuth** (the menu name may differ slightly; look for "OAuth" or "Authentication providers"). Click **Install provider**, choose **GitHub**, paste the Client ID and secret, save.
-4. In your GitHub repo open `admin/config.yml`, click the pencil icon, and change these two things, then commit:
+4. In your GitHub repo open `config.yml`, click the pencil icon, and change these two things, then commit:
    - `repo: YOUR-GITHUB-USERNAME/edge-website` to your real GitHub username and repo name
    - `site_url` and `display_url` to your real site address
-5. Go to `https://your-site/admin/` and click **Login with GitHub**.
+5. Go to `https://your-site/admin.html` and click **Login with GitHub**.
 
 Only people with write access to your GitHub repo can log in, so do not add collaborators you do not trust.
 
@@ -86,13 +86,13 @@ Create a free Cal.com or Calendly link and paste it into **Booking link**. The B
 
 ## Running it on your own computer (optional)
 
-Open a terminal in this folder and run `python3 -m http.server 8000`, then visit `http://localhost:8000`. (Opening the HTML files by double-click will not work because the pages load their content from the `content` folder.)
+Open a terminal in this folder and run `python3 -m http.server 8000`, then visit `http://localhost:8000`. (Opening the HTML files by double-click will not work because the pages load their content from the `.json` files.)
 
 ## What is where
 
-- `*.html`: the 9 pages (they all load `assets/app.js`)
-- `assets/edge.css`: the dark blue design and animations
-- `assets/app.js`: builds each page from the content files
-- `content/*.json`: all your text, prices, projects and team (this is what the dashboard edits)
-- `admin/`: the dashboard
-- `images/uploads/`: images you upload in the dashboard
+- `index, services, projects, project, team, member, hire, about, book` `.html`: the 9 pages
+- `edge.css`: the dark blue design and animations
+- `app.js`: builds each page from the content files
+- `about, contact, home, packages, projects, services, team` `.json`: all your text, prices, projects and team (this is what the dashboard edits)
+- `admin.html` and `config.yml`: the dashboard
+- `images/uploads/`: created automatically the first time you upload an image in the dashboard

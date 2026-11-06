@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "eyebrow": "Web design & development studio",
+    "title": "We build websites\nthat give your brand\nan [[EDGE.]]",
+    "subtitle": "A team of Webflow, Framer, Figma and WordPress specialists. Order a finished project, negotiate a design you love, or hire a developer directly.",
+    "primary_button": "Book a free call",
+    "secondary_button": "Explore projects",
+    "chips": [
+      "Webflow",
+      "Framer",
+      "Figma",
+      "WordPress & Shopify"
+    ]
+  },
+  "marquee": [
+    "Webflow",
+    "Framer",
+    "Figma",
+    "WordPress",
+    "Elementor",
+    "Shopify",
+    "WooCommerce",
+    "Stripe",
+    "PayPal",
+    "Logo Design",
+    "AI Content"
+  ],
+  "ways": [
+    {
+      "title": "Order a finished project",
+      "text": "Love a project in our gallery? Buy that exact design, built and ready for your brand. Pay securely with Stripe or PayPal.",
+      "link": "projects.html"
+    },
+    {
+      "title": "Negotiate a section or idea",
+      "text": "Only want one page, a section, or the structure of a design? Tell us what you loved and we agree a fair price for exactly that.",
+      "link": "projects.html"
+    },
+    {
+      "title": "Hire a developer",
+      "text": "Pick a specialist from the team, choose Starter, Pro or Premium, and work with them directly. Or book a call first.",
+      "link": "team.html"
+    }
+  ],
+  "stats": [],
+  "testimonials": [],
+  "cta": {
+    "title": "Ready to give your brand\nan [[EDGE?]]",
+    "text": "Book a free consultation and tell us what you are building. No pressure, just a clear plan."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "about": {
+    "headline": "A small team with\na big [[EDGE.]]",
+    "intro": "We design and build websites that look sharp, load fast and help brands grow.",
+    "story": "EDGE is a web design and development team. We build fast, animated websites on Webflow, Framer, Figma and WordPress, and help brands look sharp online.",
+    "approach": "You talk to us first, we agree the scope and price, and the same specialist stays with your project from design to launch.",
+    "values": [
+      {
+        "title": "Design that sells",
+        "text": "Every layout has a job: earn trust and turn visitors into clients."
+      },
+      {
+        "title": "Speed and polish",
+        "text": "Fast load times, smooth motion and details that feel premium."
+      },
+      {
+        "title": "Clear communication",
+        "text": "You always know what is happening, what it costs and what is next."
+      }
+    ],
+    "timeline": []
+  }
+}

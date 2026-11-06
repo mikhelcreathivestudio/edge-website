@@ -1,0 +1,67 @@
+{
+  "packages": [
+    {
+      "name": "Starter",
+      "price": "$199",
+      "blurb": "For simple, focused pages",
+      "features": [
+        "1 page design & build",
+        "Mobile responsive",
+        "Basic SEO setup",
+        "5 days delivery",
+        "1 revision"
+      ],
+      "stripe_link": "",
+      "paypal_link": "",
+      "popular": false
+    },
+    {
+      "name": "Pro",
+      "price": "$499",
+      "blurb": "For growing brands",
+      "features": [
+        "Up to 5 pages",
+        "Custom animations",
+        "CMS & blog setup",
+        "Speed optimisation",
+        "3 revisions"
+      ],
+      "stripe_link": "",
+      "paypal_link": "",
+      "popular": true
+    },
+    {
+      "name": "Premium",
+      "price": "$999",
+      "blurb": "For a full, standout website",
+      "features": [
+        "Up to 10 pages",
+        "Advanced interactions",
+        "E-commerce or booking",
+        "Priority support",
+        "Unlimited revisions"
+      ],
+      "stripe_link": "",
+      "paypal_link": "",
+      "popular": false
+    }
+  ],
+  "faq": [
+    {
+      "q": "How do payments work?",
+      "a": "You pay securely with Stripe or PayPal. A deposit starts the work and the balance is due at delivery."
+    },
+    {
+      "q": "Can I change developer later?",
+      "a": "Yes. Tell us and we will reassign the project without losing progress."
+    },
+    {
+      "q": "What if I only want part of a project?",
+      "a": "Use the Negotiate button on any project page and describe the section or idea you want. We reply with a custom quote."
+    },
+    {
+      "q": "Do you offer support after launch?",
+      "a": "Every package includes a handover. Ongoing support can be added."
+    }
+  ]
+}

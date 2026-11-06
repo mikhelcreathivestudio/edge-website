@@ -1,0 +1,104 @@
+{
+  "services": [
+    {
+      "title": "Webflow Development",
+      "tag": "Webflow",
+      "text": "Fast, CMS-driven sites with custom interactions. Figma-to-Webflow conversion, client-editable pages and clean handover.",
+      "bullets": [
+        "Figma to Webflow conversion",
+        "CMS collections and dynamic pages",
+        "Scroll and hover interactions"
+      ]
+    },
+    {
+      "title": "Framer Websites",
+      "tag": "Framer",
+      "text": "Motion-rich marketing sites and landing pages that load instantly and feel premium on every device.",
+      "bullets": [
+        "Landing pages and portfolios",
+        "Advanced animation and effects",
+        "Easy no-code editing"
+      ]
+    },
+    {
+      "title": "Figma UI/UX Design",
+      "tag": "Figma",
+      "text": "Interfaces, prototypes and design systems that are developer-ready from day one.",
+      "bullets": [
+        "Wireframes and high-fidelity UI",
+        "Clickable prototypes",
+        "Design systems and style guides"
+      ]
+    },
+    {
+      "title": "WordPress & Shopify",
+      "tag": "WordPress & Shopify",
+      "text": "Elementor sites and online stores that are simple for you to run and quick for customers to use.",
+      "bullets": [
+        "Elementor and WooCommerce builds",
+        "Shopify store setup",
+        "Payments with Stripe and PayPal"
+      ]
+    },
+    {
+      "title": "Logo & Brand Design",
+      "tag": "Brand",
+      "text": "Logos, banners and headers that make your brand look consistent everywhere it appears.",
+      "bullets": [
+        "Logo design",
+        "Banners, headers and social kits",
+        "Brand colours and typography"
+      ]
+    },
+    {
+      "title": "AI Content & Video",
+      "tag": "AI content",
+      "text": "AI-generated images and short videos that give your site and socials a distinct look.",
+      "bullets": [
+        "AI images and visuals",
+        "Short promo videos",
+        "Hero and background motion"
+      ]
+    }
+  ],
+  "fullstack": {
+    "title": "Need something [[custom?]]",
+    "text": "Booking systems, dashboards, member areas or integrations. If it needs a backend, our full-stack developers can build it and connect it to your site.",
+    "rows": [
+      {
+        "k": "Front-end",
+        "v": "Webflow · Framer · React"
+      },
+      {
+        "k": "CMS & stores",
+        "v": "WordPress · Shopify"
+      },
+      {
+        "k": "Payments",
+        "v": "Stripe · PayPal"
+      },
+      {
+        "k": "Back-end",
+        "v": "APIs · Databases · Auth"
+      }
+    ]
+  },
+  "process": [
+    {
+      "title": "Discover",
+      "text": "We learn your brand, goals and audience."
+    },
+    {
+      "title": "Design",
+      "text": "Wireframes and a visual direction you approve."
+    },
+    {
+      "title": "Develop",
+      "text": "Clean, fast, animated build on your platform."
+    },
+    {
+      "title": "Deliver",
+      "text": "Launch, handover and support after go-live."
+    }
+  ]
+}
