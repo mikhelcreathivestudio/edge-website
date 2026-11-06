@@ -2,7 +2,7 @@
 # BEFORE FIRST USE: change "repo" below to  your-github-username/your-repo-name
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/edge-website
+  repo: mikhelcreathivestudio/edge-website
   branch: main
   base_url: https://api.netlify.com
   auth_endpoint: auth
