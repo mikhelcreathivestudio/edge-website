@@ -11,8 +11,8 @@ media_folder: images/uploads
 public_folder: /images/uploads
 publish_mode: simple
 locale: en
-site_url: https://YOUR-SITE.netlify.app
-display_url: https://YOUR-SITE.netlify.app
+site_url: https://ed-ge.netlify.app
+display_url: https://ed-ge.netlify.app
 
 collections:
   # ------------------------------------------------------------------ PROJECTS
